@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <title>פרשה לחיים</title>
+  <meta name="description" content="ניתוח מעמיק ונגיש של פרשות השבוע, עם תובנות לחיים, למשפחה ולניהול.">
+  <link rel="stylesheet" href="styles.css?v=4-mobile">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="פרשה לחיים — דף הבית">
+      <span class="brand-mark">פ</span><span>פרשה לחיים</span>
+    </a>
+    <button id="favoritesBtn" class="icon-btn" aria-label="הצגת פרשות שמורות"><span>♡</span><em id="favCount">0</em></button>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">ארון הספרים האישי שלך</p>
+        <h1>למצוא בפרשה<br><span>משהו לחיים.</span></h1>
+        <p>עיון נגיש ומעמיק בפרשות השבוע — מהפסוקים אל המשפחה, העבודה וההחלטות שאנחנו מקבלים.</p>
+      </div>
+      <blockquote>״בכל שבוע — שאלה אחת שמאפשרת להסתכל על החיים קצת אחרת.״</blockquote>
+    </section>
+
+    <section class="workspace" aria-label="חיפוש ועיון בפרשות">
+      <div class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="חיפוש לפי פרשה, פסוק או רעיון…" aria-label="חיפוש בפרשות">
+        <kbd>חפש</kbd>
+      </div>
+      <div id="topics" class="topics" role="group" aria-label="סינון לפי נושא"></div>
+      <div class="section-head">
+        <div><p id="resultLabel">הפרשות האחרונות</p><h2 id="resultCount"></h2></div>
+        <button id="clearBtn" class="text-btn" hidden>ניקוי סינון</button>
+      </div>
+      <div id="cards" class="cards"></div>
+      <div id="empty" class="empty" hidden><span>⌕</span><h3>לא נמצאה פרשה מתאימה</h3><p>נסו לחפש מילה אחרת או לבחור נושא מהרשימה.</p></div>
+    </section>
+  </main>
+
+  <div id="reader" class="reader" hidden>
+    <div class="reader-backdrop" data-close></div>
+    <article class="reader-sheet" role="dialog" aria-modal="true" aria-labelledby="readerTitle">
+      <div class="reader-actions"><button class="close-btn" data-close aria-label="סגירה">×</button><button id="readerFav" class="save-btn"></button></div>
+      <div id="readerContent"></div>
+    </article>
+  </div>
+
+  <script src="app.js?v=4-mobile"></script>
+</body>
+</html>
